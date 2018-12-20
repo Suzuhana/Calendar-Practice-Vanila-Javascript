@@ -1,7 +1,13 @@
 import './styles/style.sass';
 
-console.log('hello, world');
+import { Calendar } from './Calendar';
 
-const testMessage = 'it works';
+let calendar = new Calendar(document);
 
-console.log(testMessage);
+calendar.render();
+
+let nextButton = document.querySelector('.calendar .calendar-header .next');
+let prevButton = document.querySelector('.calendar .calendar-header .prev');
+
+nextButton.addEventListener('click', calendar.increaseMonthByOne);
+prevButton.addEventListener('click', calendar.decreaseMonthByOne);

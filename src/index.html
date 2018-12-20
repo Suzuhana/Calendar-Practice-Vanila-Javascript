@@ -4,10 +4,31 @@
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
+<link
+rel="stylesheet"
+href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+crossorigin="anonymous"
+/>
+
 <body>
-  <h1 class="center">Hello, world! It works </h1>
-  <h2 class="center">Im a Paragraph</h2>
-  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <div class="calendar">
+      <div class="calendar-header">
+          <h1 class="month"></h1>
+          <h2 class="year"></h2>
+          <a class="prev"><span class="fa fa-arrow-left"></span></a>
+          <a class="next"><span class="fa fa-arrow-right"></span></a>
+      </div>
+      <div class="calendar-body">
+          <div class="days-container">
+              <ul></ul>
+          </div>
+          <div class="dates-container">
+              <ul></ul>
+          </div>
+      </div>
+  </div>
 </body>
 
+<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </html>
