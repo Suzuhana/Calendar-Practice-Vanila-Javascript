@@ -1,3 +1,5 @@
+import {toMonth} from 'number-to-date-month-name';
+
 export class Calendar {
     constructor(document) {
         this.document = document;
@@ -96,7 +98,7 @@ export class Calendar {
         this._populateDates();
 
         this.elementYear.textContent = this.year.toString();
-        this.elementMonth.textContent = this.month.toString();
+        this.elementMonth.textContent = toMonth(this.month);
     }
 
     increaseMonthByOne() {

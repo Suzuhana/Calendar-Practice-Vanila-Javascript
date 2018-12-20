@@ -1,4 +1,4 @@
-import './styles/style.sass';
+import './styles/style.scss';
 
 import { Calendar } from './Calendar';
 

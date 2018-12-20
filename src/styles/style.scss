@@ -1,0 +1,56 @@
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.calendar {
+  width: 350px;
+  margin: auto auto;
+}
+
+.calendar-header {
+  text-align: center;
+  position: relative;
+}
+
+.calendar-body {
+  position: relative;
+}
+
+.calendar-header a {
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  top: 0;
+}
+
+.calendar-header a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  //Way to put element in center
+  transform: translate(-50%, -50%);
+}
+
+.calendar-body ul {
+  display: flex;
+  align-content: start;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.calendar-body .dates-container ul {
+    flex-wrap: wrap;
+}
+
+.calendar-body ul > li {
+    flex: 0 0 calc(100%/7);
+}
+
+a.prev {
+  left: 0;
+}
+
+a.next {
+  right: 0;
+}

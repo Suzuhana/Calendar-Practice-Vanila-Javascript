@@ -3,7 +3,7 @@ const stylus = {
   loaderName: 'stylus-loader'
 }
 const sass = {
-  fileRegexp: /\.sass$/,
+  fileRegexp: /\.(sa|css)$/,
   loaderName: 'sass-loader'
 }
 
