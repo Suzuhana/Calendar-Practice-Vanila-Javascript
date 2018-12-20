@@ -3,6 +3,10 @@ ul {
   text-align: center;
 }
 
+li {
+  cursor: default;
+}
+
 .calendar {
   width: 350px;
   margin: auto auto;
@@ -11,6 +15,7 @@ ul {
 .calendar-header {
   text-align: center;
   position: relative;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
 }
 
 .calendar-body {
@@ -40,11 +45,15 @@ ul {
 }
 
 .calendar-body .dates-container ul {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.calendar-body .dates-container li:hover {
+  background: rgba($color: #000000, $alpha: 0.3);
 }
 
 .calendar-body ul > li {
-    flex: 0 0 calc(100%/7);
+  flex: 0 0 calc(100% / 7);
 }
 
 a.prev {
@@ -53,4 +62,8 @@ a.prev {
 
 a.next {
   right: 0;
+}
+
+.today {
+  background: rgba($color: #000000, $alpha: 0.1);
 }

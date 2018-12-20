@@ -4,7 +4,7 @@ export class Calendar {
     constructor(document) {
         this.document = document;
         this.now = new Date(Date.now());
-        this.displayTime = this.now;
+        this.displayTime = new Date(Date.now());
 
         this._getReferences();
         this._createMapForDays();
@@ -69,7 +69,9 @@ export class Calendar {
             let emptyliElement = this.document.createElement('li');
             let date = i + 1;
             emptyliElement.textContent = date.toString();
-            this._markToday(this.displayTime, emptyliElement);
+            let dateObj = new Date(this.displayTime.getTime())
+            dateObj.setDate(date);
+            this._markToday(dateObj, emptyliElement);
             ulElement.appendChild(emptyliElement);
         }
 
